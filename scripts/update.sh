@@ -1,10 +1,10 @@
 #!/bin/bash
 
 cd ~/website/create-users
-sudo npm run install -y
+sudo npm install -y
 
 cd ~/website/backend
-sudo npm run install -y
+sudo npm install -y
 
 cd ~/website/frontend
-sudo npm run install -y
+sudo npm install -y
