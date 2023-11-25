@@ -1,0 +1,8 @@
+/node_modules
+/saves/*
+/frontend/src/videos/*
+/backend/images/*
+
+!/saves/.gitkeep
+!/frontend/src/videos/.gitkeep
+!/backend/images/.gitkeep

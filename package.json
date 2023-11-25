@@ -1,0 +1,26 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "author": "David Frings & PaRaMeRoS Team",
+  "license": "AGPL",
+  "description": "This is the Official PaRaMeRoS Website",
+  "devDependencies": {
+    "nodemon": "^2.0.22",
+    "bcrypt": "^5.1.1",
+    "joi": "^17.10.2",
+    "mongoose": "^7.5.3"
+  },
+  "dependencies": {
+    "concurrently": "^7.6.0",
+    "react-scripts": "^5.0.1"
+  },
+  "scripts": {
+    "install": "~/website/scripts/install.sh",
+    "update": "~/website/scripts/update.sh",
+    "start": "concurrently \"npm run mongod\" \"npm run backend\" \"npm run frontend\" -n \"MongoDB ,Backend ,Frontend\"",
+    "mongod": "mongod --port 27017 --dbpath ~/website/db --bind_ip 127.0.0.1 --auth",
+    "create-users": "npm run start --prefix ~/website/create-users",
+    "backend": "npm run start --prefix ~/website/create-users",
+    "frontend": "npm run start --prefix ~/website/create-users"
+  }
+}

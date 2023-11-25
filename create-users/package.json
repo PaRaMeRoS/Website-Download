@@ -1,0 +1,15 @@
+{
+  "name": "create-users",
+  "version": "1.0.0",
+  "author": "David Frings & PaRaMeRoS Team",
+  "license": "MIT",
+  "description": "This is the backend from the Official PaRaMeRoS Website",
+  "scripts": {
+    "start": "node CreateUsers.js"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "joi": "^17.10.2",
+    "mongoose": "^7.5.3"
+  }
+}

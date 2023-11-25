@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: var(--backround);
+    min-height: 100vh;
+    justify-content: flex-end;
+    align-items: flex-end;
+    align-items: flex-end;
+}
+::selection{
+    color: #211830;
+    background-color: #519975;
+}
+.homescreen {
+    background-image: url("../images/background.png");
+    overflow: hidden;
+    height: 100vh;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+}
+.homescreen0 {
+    height: 0;
+    width: 0;
+}
+
+.homescreen video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
+    background-color: rgba(28, 31, 31, 0.85);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.header div {
+    transform: translateY(7px);
+}
+
+.header .logo {
+    color: var(--backround);
+    font-weight: 700;
+    font-size: 2.2vw;
+    text-decoration: none;
+}
+
+.header img {
+    width: 75px;
+    height: 75px;
+    border-radius: 20px;
+    transform: translateY(-7px);
+}
+
+.header ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    font-size: 1.2vw;
+    margin: 0;
+}
+
+.header ul li {
+    list-style: none;
+}
+
+.header ul li .Link {
+    position: relative;
+    text-decoration: none;
+    padding: 6px 15px;
+    color: var(--backround);
+    border-radius: 20vw;
+    background: transparent;
+}
+
+.header ul li .Link:hover,
+.header ul li .Link#active {
+    background: #112434;
+    color: var(--backround);
+}
+
+.image-subtitle:hover {
+    color: var(--backround);
+    transition: 0.5s;
+}
+
+.main {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    justify-content: center;
+    color: #fff;
+    position: absolute;
+    text-align: center;
+    justify-self: center;
+    pointer-events: auto;
+    align-items: center;
+}
+.main div {
+    position: relative;
+    top: 35%;
+}
+.parallax {
+    pointer-events: none;
+    transform: translateX(-50%);
+    transition: 0.45s cubic-bezier(0.2,0.5,0.3,1);
+    perspective: 10%;
+}
+.main div h2{
+    font-weight: 100;
+    font-size: 4.5vw;
+    animation: 1.5s ease-out 0s 1 fadeIn;
+}
+.main div h1 {
+    font-weight: 800;
+    font-size: 8vw;
+    line-height: 0.88;
+    animation: 3.5s ease-out 0s 1 fadeIn;
+}
+
+
+@keyframes animateWave {
+    0% {
+        background-position-x: 1000px;
+    }
+
+    100% {
+        background-position-x: 0px;
+    }
+}
+
+@keyframes animateWave2 {
+    0% {
+        background-position-x: 0px;
+    }
+
+    100% {
+        background-position-x: 1000px;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
