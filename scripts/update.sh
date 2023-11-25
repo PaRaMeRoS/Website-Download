@@ -8,3 +8,6 @@ sudo npm install -y
 
 cd ~/website/frontend
 sudo npm install -y
+
+cd ~/website
+sudo npm install -y
