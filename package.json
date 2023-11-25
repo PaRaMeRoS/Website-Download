@@ -15,7 +15,6 @@
     "react-scripts": "^5.0.1"
   },
   "scripts": {
-    "install": "~/website/scripts/install.sh",
     "update": "~/website/scripts/update.sh",
     "start": "concurrently \"npm run mongod\" \"npm run backend\" \"npm run frontend\" -n \"MongoDB ,Backend ,Frontend\"",
     "mongod": "mongod --port 27017 --dbpath ~/website/db --bind_ip 127.0.0.1 --auth",

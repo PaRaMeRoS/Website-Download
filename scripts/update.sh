@@ -1,3 +1,5 @@
+#!/bin/bash
+
 cd ~/website/create-users
 sudo npm run install -y
 
