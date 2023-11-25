@@ -3,4 +3,6 @@
 /backend/images/*
 
 !/frontend/src/videos/.gitkeep
+!/frontend/src/videos/intro.mov
+!/frontend/src/videos/Run.mp4
 !/backend/images/.gitkeep
