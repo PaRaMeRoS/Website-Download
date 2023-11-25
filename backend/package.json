@@ -5,7 +5,8 @@
   "license": "AGPL",
   "description": "This is the backend from the Official PaRaMeRoS Website",
   "scripts": {
-    "start": "concurrently \"node server.js\" \"python3 python-terminal/terminal.py\" --names \"Backend,Python \""
+    "start": "node server.js",
+    "python": "python3 ~/website/backend/python-terminal/terminal.py"
   },
   "dependencies": {
     "concurrently": "^7.6.0",

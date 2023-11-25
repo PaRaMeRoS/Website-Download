@@ -20,6 +20,7 @@
     "mongod": "mongod --port 27017 --dbpath ~/website/db --bind_ip 127.0.0.1 --auth",
     "create-users": "npm run start --prefix ~/website/create-users",
     "backend": "npm run start --prefix ~/website/backend",
+    "python": "npm run python --prefix ~/website/backend",
     "frontend": "npm run start --prefix ~/website/frontend"
   }
 }
