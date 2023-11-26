@@ -16,7 +16,8 @@
   },
   "scripts": {
     "update": "~/website/scripts/update.sh",
-    "start": "concurrently \"npm run mongod\" \"npm run backend\" \"npm run frontend\" -n \"MongoDB ,Backend ,Frontend\"",
+    "start": "npm run start --prefix ~/website/create-users &&  npm run start1",
+    "start1": "concurrently \"npm run mongod\" \"npm run backend\" \"npm run python\" \"npm run frontend\" -n \"MongoDB ,Backend ,Python  ,Frontend\"",
     "mongod": "mongod --port 27017 --dbpath ~/website/db --bind_ip 127.0.0.1 --auth",
     "create-users": "npm run start --prefix ~/website/create-users",
     "backend": "npm run start --prefix ~/website/backend",

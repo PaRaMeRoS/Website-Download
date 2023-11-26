@@ -4,6 +4,8 @@ import logging
 import os
 import sys
 
+print("Python is starting...")
+
 # Konfigurieren des Loggers
 logger = logging.getLogger('backend_new.py')
 logger.setLevel(logging.DEBUG)
@@ -13,7 +15,6 @@ logger.addHandler(fh)
 formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 fh.setFormatter(formatter)
 logger.addHandler(fh)
-
 
 # var Area Placeholder till config
 file_input = "(system)"
