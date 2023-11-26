@@ -35,6 +35,10 @@ body {
 .file {
     display: none;
 }
+.file-img {
+    height: 50px;
+    width: 50px;
+}
 .submit {
     top: 20px;
     right: 50px;
