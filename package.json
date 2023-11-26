@@ -19,9 +19,9 @@
     "start1": "node ~/website/create-users/CreateUsers.js &&  npm run start1",
     "start": "concurrently \"sudo npm run mongod\" \"sudo npm run create-users\" \"sudo npm run backend\" \"sudo npm run python\" \"sudo npm run frontend\" -n \"MongoDB ,Users   ,Backend ,Python  ,Frontend\"",
     "mongod": "mongod --port 27017 --dbpath ~/website/db --bind_ip 127.0.0.1 --auth",
-    "create-users": "sudo npm run start --prefix ~/website/create-users",
-    "backend": "sudo npm run start --prefix ~/website/backend",
-    "python": "sudo npm run python --prefix ~/website/backend",
-    "frontend": "sudo npm run start --prefix ~/website/frontend"
+    "create-users": "npm run start --prefix ~/website/create-users",
+    "backend": "npm run start --prefix ~/website/backend",
+    "python": "npm run python --prefix ~/website/backend",
+    "frontend": "npm run start --prefix ~/website/frontend"
   }
 }
