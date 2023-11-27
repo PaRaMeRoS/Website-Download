@@ -3,6 +3,8 @@ const Joi = require("joi");
 const bcrypt = require("bcrypt");
 const mongoose = require("mongoose");
 
+//TODO: Add wait time for database connection
+
 //Set the variables
 Users = ["Max", "David", "Carl", "Alex", "Noah", "Basti", "Nathan", "Anna", "Maria", "Coach!"]
 Passwords = ["Maxi123!", "David123!", "Carl123!", "Alex123!", "Noah123!", "Basti123!", "Nathan123!", "Anna123!", "Maria123!", "Coach123!"]
@@ -57,19 +59,19 @@ Users.forEach (async (NewUser, index) => {
   try {
     const { error } = validate(body);
     if (error)
-      return console.log('\x1b[31m%s\x1b[0m', datetime + error.details[0].message);
+      return console.log('\x1b[32m%s\x1b[0m', datetime + error.details[0].message);
 
     const user = await User.findOne({ name: body.name });
     if (user)
-      return console.log('\x1b[31m%s\x1b[0m', datetime + `User with the Name ${body.name} already exist.`);
+      return console.log('\x1b[32m%s\x1b[0m', datetime + `User with the Name ${body.name} already exist.`);
 
     const salt = await bcrypt.genSalt(Number(SALT));
     const hashPassword = await bcrypt.hash(body.password, salt);
 
     await new User({ ...body, password: hashPassword }).save();
-    console.log('\x1b[32m%s\x1b[0m', datetime + `Created user ${body.name} successfully.`);
+    console.log('\x1b[31m%s\x1b[0m', datetime + `Created user ${body.name} successfully.`);
   } catch (error) {
-    console.log('\x1b[31m%s\x1b[0m', datetime + `Internal Server Error (${error})`);
+    console.log('\x1b[32m%s\x1b[0m', datetime + `Internal Server Error (${error})`);
   }
 });
 

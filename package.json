@@ -18,7 +18,7 @@
     "update": "~/website/scripts/update.sh",
     "start1": "node ~/website/create-users/CreateUsers.js &&  npm run start1",
     "start": "concurrently \"npm run mongod\" \"npm run create-users\" \"npm run backend\" \"npm run python\" \"npm run frontend\" -n \"MongoDB ,Users   ,Backend ,Python  ,Frontend\"",
-    "mongod": "mongod --port 27017 --dbpath ~/website/db --bind_ip 127.0.0.1 --auth",
+    "mongod": "mongod --dbpath ~/website/db --bind_ip 127.0.0.1 --auth --port 27017",
     "create-users": "npm run start --prefix ~/website/create-users",
     "backend": "npm run start --prefix ~/website/backend",
     "python": "npm run python --prefix ~/website/backend",
