@@ -20,12 +20,12 @@ logger.addHandler(fh)
 file_input = "(system)"
 running = True
 User = "David"
-dir0 = "~/website/backend/python-terminal/directory.fll"
-in0 = "~/website/backend/python-terminal/output.fll"
-out0 = "~/website/backend/python-terminal/input.fll"
-start0 = "~/website/backend/python-terminal/start.fll"
-user0 = "~/website/backend/python-terminal/user.fll"
-config0 = "~/website/backend/python-terminal/config.fll"
+dir0 = "./directory.fll"
+in0 = "./output.fll"
+out0 = "./input.fll"
+start0 = "./start.fll"
+user0 = "./user.fll"
+config0 = "./config.fll"
 real_admin_user = ["placeholder"]
 admin_user = ["David", "Max"]
 normal_user = ["Carl", "Alex", "Maria", "Noah", "Anna", "Nathan", "Livia", "Sebastian"]
@@ -145,7 +145,7 @@ class User:
 
     # Hier Config auslese und conf einbauen
     def conf():
-        with open("~/website/backend/python-terminal/config.config", "r") as f:
+        with open("./config.config", "r") as f:
             lines = f.readlines()
             read = lines[0].split(", ")
             read[0] = read[0].replace(", ", "")
