@@ -14,7 +14,7 @@ const CreateEvent = () => {
   const [file, setFile] = useState(null);
 
   //Set Ip of the backend/api
-  const backend = 'http://127.0.0.1:8080/api/';
+  const backend = 'http://localhost:8080/api/';
 
   //Get the token from the localStorage
   const token = localStorage.getItem('token');

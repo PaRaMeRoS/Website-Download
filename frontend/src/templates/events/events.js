@@ -12,7 +12,7 @@ const Events = () => {
   const [posts, setPosts] = useState([]);
 
   //Set Ip of the backend/api
-  const backend = 'http://127.0.0.1:8080/api/';
+  const backend = 'http://localhost:8080/api/';
 
   //Set the useEffect
   useEffect(() => {

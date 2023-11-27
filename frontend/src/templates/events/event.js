@@ -5,8 +5,8 @@ import '../../css/style.css';
 
 const EventTemplate = ({post}) => {
   //Set Ip of the backend/api
-  const backend = 'http://127.0.0.1:8080/api/';
-  const img = 'http://127.0.0.1:8080/images/';
+  const backend = 'http://localhost:8080/api/';
+  const img = 'http://localhost:8080/images/';
 
   return (
     <div className='infos'>

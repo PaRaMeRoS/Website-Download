@@ -12,7 +12,7 @@ const Login = () => {
   const [error, setError] = useState('');
 
   //Set Ip of the backend/api
-  const backend = 'http://127.0.0.1:8080/api/';
+  const backend = 'http://localhost:8080/api/';
 
   //Get the Elements by Id 
   const password = document.getElementById('password');
