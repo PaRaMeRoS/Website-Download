@@ -30,5 +30,5 @@ module.exports = () => {
       console.log('\x1b[31m%s\x1b[0m', datetime + err);
       console.log('\x1b[31m%s\x1b[0m', datetime + "Could not connect to the database!");
     }
-  }, 1);
+  }, 1500);
 };

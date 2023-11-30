@@ -28,12 +28,12 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link className='Link' to='/hobbies/create'>
+            <Link className='Link' to='/hobbies/create' id='active'>
               Hobbies
             </Link>
           </li>
           <li>
-            <Link className='Link' to='/events/create' id='active'>
+            <Link className='Link' to='/events/create'>
               Events
             </Link>
           </li>

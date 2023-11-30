@@ -1,15 +1,10 @@
 //Import Modules
 import { Link } from 'react-router-dom';
 //Import Components
-import '../../css/Navbar2.css';
+import '../../css/Navbar.css';
 import Logo from '../../images/Logo.png';
 
 const Navbar = () => {
-  const handleLogout = () => {
-    localStorage.removeItem('token');
-    window.location.reload();
-  };
-
   return (
     <div className='homescreen2'>
       <header className='header2'>
@@ -23,28 +18,28 @@ const Navbar = () => {
         </div>
         <ul className='navigation'>
           <li>
-            <Link className='Link' to='/terminal'>
-              Terminal
-            </Link>
-          </li>
-          <li
-            ><Link className='Link' to='/statistics' id='active'>
-              Statistics
+            <Link className='Link' to='/' id='active'>
+              Home
             </Link>
           </li>
           <li>
-            <Link className='Link' to='/events/create'>
+            <Link className='Link' to='/about'>
+              About
+            </Link>
+          </li>
+          <li>
+            <Link className='Link' to='/events'>
               Events
             </Link>
           </li>
           <li>
-            <button className='Link' onClick={handleLogout}>
-              Logout
-            </button>
+            <Link className='Link' to='/terminal'>
+              Log In
+            </Link>
           </li>
         </ul>
       </header>
-    </div>  
+    </div>
   );
 }
 

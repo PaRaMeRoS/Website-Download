@@ -6,6 +6,7 @@ const multer = require("multer");
 const connection = require("./db");
 const authRoutes = require("./routes/auth");
 const postRoutes = require("./routes/posts");
+const hobbiesRoutes = require("./routes/hobbies");
 const terminalRoutes = require("./routes/terminal");
 const { token } = require("./models/user");
 const app = express();
@@ -27,6 +28,7 @@ app.use(cors());
 app.use("/api/users", userRoutes);
 app.use("/api/auth", authRoutes);
 app.use("/api/posts", postRoutes);
+app.use("/api/hobbies", hobbiesRoutes);
 app.use("/terminal", terminalRoutes);
 app.use("/images", express.static(path.join(__dirname, "./images")));
 

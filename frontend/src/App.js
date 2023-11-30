@@ -5,12 +5,15 @@ import Impressum from './templates/public/impressum';
 import NotFound from './templates/public/notFound';
 
 import Terminal from './templates/private/terminal';
-import Statistics from './templates/private/statistics';
 import Login from "./templates/private/login";
 
 import Events from './templates/events/events';
 import CreateEvent from './templates/events/createEvent';
 import SingleEvent from './templates/events/singleEvent';
+
+import Hobbies from './templates/hobbies/hobbies';
+import CreateHobby from './templates/hobbies/createHobby';
+import SingleHobby from './templates/hobbies/singleHobby';
 
 import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 
@@ -30,14 +33,17 @@ function App() {
 
           {user && <Route path="/terminal" element={<Terminal />} />}
           <Route path="/terminal" element={<Navigate replace to="/login" />} />
-          {user && <Route path="/statistics" element={<Statistics />} />}
-          <Route path="/statistics" element={<Navigate replace to="/login" />} />
           <Route path="/login" element={<Login />} />
 
           <Route path="/events" element={<Events />} />
           {user && <Route path="/events/create" element={<CreateEvent />} />}
           <Route path="/events/create" element={<Navigate replace to="/login" />} />
           <Route path="/post/:id" element={<SingleEvent />} />
+
+          <Route path="/hobbies" element={<Hobbies />} />
+          {user && <Route path="/hobbies/create" element={<CreateHobby />} />}
+          <Route path="/hobbies/create" element={<Navigate replace to="/login" />} />
+          <Route path="/hobby/:id" element={<SingleHobby />} />
         </Routes>
       </div>
     </BrowserRouter>

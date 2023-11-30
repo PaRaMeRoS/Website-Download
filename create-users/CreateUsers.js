@@ -74,6 +74,6 @@ setTimeout(function () {
       console.log('\x1b[32m%s\x1b[0m', datetime + `Internal Server Error (${error})`);
     }
   });
-}, 1);
+}, 1000);
 
 return(true)
