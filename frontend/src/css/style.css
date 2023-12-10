@@ -20,6 +20,9 @@ body {
     justify-content: flex-end;
     align-items: flex-end;
 }
+p {
+    margin-bottom: 0.2rem;
+}
 
 #impressum, 
 #policies {
@@ -32,12 +35,66 @@ body {
     width: 50%;
     padding: 10px;
 }
-.file {
+.file,
+.edit,
+.delete {
     display: none;
 }
+.title-c {
+    font-size: 30px;
+    border: none;
+    padding: 20px;
+    margin-left: 10px;
+    width: 70vw;
+    background-color: transparent;
+}
+.desc-c {
+    font-size: 30px;
+    border: none;
+    padding: 20px;
+    width: 88vw;
+    background-color: transparent;
+}
+.desc-c::-webkit-scrollbar {
+    display: none;
+}
+.desc-c {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.title::placeholder,
+.desc::placeholder {
+    color: rgb(189, 185, 185);
+    font-weight: 400;
+}
+.title:focus,
+.desc:focus {
+    outline: none;
+}
+.desc {
+    height: 65vh;
+    font-family: inherit;
+    font-size: 20px;
+}
+
 .file-img svg {
-    height: 50px;
-    width: 50px;
+    border: 2px solid;
+    border-radius: 50%;
+    /*color: rgb(129, 125, 125);
+    font-size: 20px;
+    display: flex;*/
+}
+
+
+.file-img svg,
+.delete-post svg,
+.edit-post svg {
+    height: 28px;
+    width: 28px;
+    margin-bottom: 0.2rem;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
 }
 .submit {
     top: 20px;
@@ -51,6 +108,9 @@ body {
     cursor: pointer;
     display: flex;
     align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 80px;
 }
 
 
